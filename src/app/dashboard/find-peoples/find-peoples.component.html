@@ -1,0 +1,43 @@
+<section>
+
+    <!-- <div class="card mb-3" style="max-width: 540px;" *ngFor="let i of users">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src={{i.displayPic}} class="img-fluid" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title">{{i.name}}</h3>
+              <p class="card-text"><small class="text-body-secondary">From {{i.demographicInfo}} </small></p>
+            </div>
+            <div class="ms-3">
+                <button class="btn btn-primary">Follow</button>
+            </div>
+          </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+
+        <div class="row mt-4" style="margin-bottom: 100px;">
+
+          <div class="col-12 col-sm-6 col-lg-3" style="height: inherit;" *ngFor="let i of users">
+            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+              <!-- Team Thumb-->
+              <div class="advisor_thumb"><img src={{i.displayPic}} class="img-fluid" alt="">
+                <!-- Social Info-->
+                <div class="social-info"><button class="btn btn-primary" (click)="pushValue(i.username)" (click)="profileClick()" (click)="refreshPage()">Follow</button></div>
+              </div>
+              <!-- Team Details-->
+              <div class="single_advisor_details_info">
+                <h3 class="name">{{i.name}}</h3>
+                <p class="designation place"><small class="text-body-secondary place">From {{i.demographicInfo}} </small></p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+</section>

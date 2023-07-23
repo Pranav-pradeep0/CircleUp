@@ -1,0 +1,133 @@
+<!-- <div class="tags">
+    <p class="head">Discover.</p>
+    <p class="head">Connect.</p>
+    <p class="head">Thrive.</p>
+</div> -->
+<div>
+  
+  <nav class="navbar navbar-expand-l">
+      <div class="container">
+          <p class="navbar-brand"><i class="fa-solid fa-circle-notch fa-2x mt-2"></i></p>
+          <h3>Circleup</h3>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ms-auto">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link" href="#">Features</a>
+                  <a class="nav-link" href="#">About</a>
+              </div>
+          </div>
+      </div>
+  </nav>
+  
+  
+  
+  
+  <div class="bodydiv">
+  
+      <section class="user">
+          <div class="user_options-container">
+            <div class="user_options-text">
+              <div class="user_options-unregistered">
+                <h2 class="user_unregistered-title">Don't have an account?</h2>
+                <p class="user_unregistered-text">Create now!</p>
+                <button class="user_unregistered-signup" id="signup-button" (click)="onSignUpClick()">Sign Up</button>
+              </div>
+        
+              <div class="user_options-registered">
+                <h2 class="user_registered-title">Already have a account!</h2>
+                <p class="user_registered-text">Get started..</p>
+                <button class="user_registered-login" id="login-button" (click)="onLoginClick()">Login</button>
+              </div>
+            </div>
+            
+  
+            <div class="user_options-forms" id="user_options-forms" [ngClass]="formAnimationClass">
+              <div class="user_forms-login">
+                <h2 class="forms_title">Login</h2>
+                <form [formGroup]="loginForm" (ngSubmit)="login()" class="forms_form">
+  
+                  <fieldset class="forms_fieldset">
+                    <div class="forms_field">
+                      <input  formControlName="uname" [ngClass]="{ 'formInvalid': loginForm.get('uname')?.invalid && loginForm.get('uname')?.touched }" type="text" placeholder="Username" class="forms_field-input" autofocus />
+                    </div>
+                    <div class="forms_field">
+                      <input  formControlName="psw" [ngClass]="{ 'formInvalid': loginForm.get('psw')?.invalid && loginForm.get('psw')?.touched }" type="password" placeholder="Password" class="forms_field-input" required />
+                    </div>
+                    <div class="forms_field loginbtn">
+                      <button class="forms_buttons-action" type="submit">Login</button>
+                    </div>
+                  </fieldset>
+                  <div class="forms_buttons">
+                    <button type="button" class="forms_buttons-forgot">Forgot password?</button>
+                  </div>
+  
+                </form>
+              </div>
+              <div class="user_forms-signup">
+                <h2 class="forms_title">Sign Up</h2>
+                <form [formGroup]="registerForm" (ngSubmit)="register()" class="forms_form">
+  
+                  <fieldset class="forms_fieldset">
+                    <div class="forms_field">
+                      <input autocomplete="off" formControlName="regName" [ngClass]="{ 'regformInvalid': registerForm.get('regName')?.invalid && loginForm.get('regName')?.touched }" name="regName" id="regName" type="text" placeholder="Full Name" class="forms_field-input" required />
+                    </div>
+                    <div class="forms_field">
+                      <input formControlName="regUname" [ngClass]="{ 'regformInvalid': loginForm.get('regUname')?.invalid && loginForm.get('regUname')?.touched }" type="text" placeholder="Username" class="forms_field-input" required />
+                    </div>
+                    <div class="forms_field">
+                      <input formControlName="regPwd" [ngClass]="{ 'regformInvalid': loginForm.get('regPwd')?.invalid && loginForm.get('regPwd')?.touched }" type="password" placeholder="Password" class="forms_field-input" required />
+                    </div>
+                  </fieldset>
+                  <div class="forms_buttons">
+                    <button type="submit" class="forms_buttons-action">Next</button>  
+                  </div>
+  
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+  
+  </div>
+</div>
+
+<!-- <div class="row login">
+    <div class="col-5 leftiside">
+        <img src="https://yourimageshare.com/ib/4mBeTocYYZ.webp" alt="">
+    </div>
+    <div class="col-7 rightside mt-3">
+        <h1 class="text-center h1">Sign in and Step into the Circle</h1>
+        [formGroup]="registerForm" (ngSubmit)="onSubmit()"
+        <form  class="form">
+            <div class="form-floating mb-3">
+                <input formControlName="username" type="email" class="form-control input1" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Username</label>
+            </div>
+
+            <div class="form-floating">
+                <input formControlName="" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+
+            <div class="text-center m-5">
+                <button class="button" role="button" type="submit">Sign in</button>
+            </div>
+
+        </form>
+
+
+        <p class="signup"><a href="" class="sup">Not a member ? Take the leap and join CircleUp today !</a></p>
+        <hr>
+
+        <div class="orsignup text-center">
+            <p class="or">or sign up with</p>
+            <p><i class="fa-brands fa-google fa-2x mx-2"></i> <i class="fa-brands fa-reddit fa-2x mx-2"></i></p>
+        </div>
+
+    </div>
+</div> -->

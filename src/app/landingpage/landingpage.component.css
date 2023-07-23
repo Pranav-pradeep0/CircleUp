@@ -1,0 +1,244 @@
+.navbar {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.fa-solid {
+    color: rgba(0, 0, 0, 0.719);
+}
+
+/* Please ❤ this if you like it! */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+$primary: #03071e;
+$secondary: #edf2f4; */
+
+
+.landingpage {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.body .container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+}
+
+.container2{
+    margin-block: 0px !important;
+}
+
+
+/* .body .content-wrapper {
+    padding: 3rem 0;
+}
+
+.body .content-wrapper p:not(:last-child) {
+    margin-bottom: 1rem;
+} */
+
+.blur{
+    backdrop-filter: blur(100px);
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.skip{
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.about{
+    line-height: 40px;
+}
+
+
+/* .border{
+    border: black 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+} */
+
+
+.ftrs{
+    margin-top: 130px;
+    margin-left: 560px;
+}
+
+
+.tologin{
+    text-decoration: none;
+    color: inherit;
+    backdrop-filter: blur(20px);
+
+}
+
+
+.disc{
+    margin-top: 90px;
+    margin-left: 560px;
+}
+
+
+
+.dummy{
+    height: 250px;
+}
+
+.body .body-wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 5px;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
+
+.body-wrapper::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and Opera */
+}
+
+.body section {
+    position: relative;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.body section:first-of-type {
+    margin-top: 0;
+}
+
+.body section:last-of-type {
+    margin-bottom: 0;
+}
+
+.body .parallax {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.parallax2 {
+    position: relative;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+
+.body .parallax>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background-position: center;
+    background-size: cover;
+    filter: contrast(1.2);
+}
+
+.body .parallax2>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background-position: center;
+    background-size: cover;
+    filter: contrast(1.2);
+}
+
+.body .parallax3{
+    min-height: 40vh;
+}
+
+
+.background2{
+    background-size: contain !important;
+    background-repeat: no-repeat;
+}
+
+.background3{
+    background-size: contain !important;
+    background-repeat: no-repeat;
+}
+
+.body .parallax>h2 {
+    margin-top: -100px;
+    position: relative;
+    z-index: 1;
+}
+
+.background {
+    transform: translateZ(-6px) scale(2) rotate(0deg);
+    opacity: 0.6;
+    background-position-y: -70px !important;
+    transition: .6s;
+}
+
+.container:hover .background{
+    transform: scale(1.2);
+}
+
+
+.foreground {
+    transform: translateZ(-4px) scale(4) rotate(0deg);
+    opacity: 0.8;
+    width: 50%;
+}
+
+.background2 {
+    transform: translateZ(-6px) scale(4) rotate(0deg);
+    opacity: 1;
+    background-position-y: -60px;
+    transition: .6s;
+}
+
+
+/* .container:hover .background2{
+    transform: scale(2);
+} */
+
+
+.background3 {
+    transform: translateZ(-6px) scale(3) rotate(0deg);
+    opacity: 1;
+    background-position-y: -120px !important;
+    transition: .6s;
+
+}
+
+
+
+/* .container:hover .background3{
+    transform: scale(1.6); 
+} */
+
+
+/* .foreground2 {
+    transform: translateZ(-5px) scale(1.5) rotate(2deg);
+    opacity: 0.8;
+    width: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+} */

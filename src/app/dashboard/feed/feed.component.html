@@ -1,0 +1,54 @@
+<div class="feedbody">
+    <div class="card mx-auto w-50 newPost">
+        <h4 class="card-header text-center">Create a new Post</h4>
+        <div class="card-body">
+            <form [formGroup]="newPost" (ngSubmit)="createPost()">
+                <input formControlName="title" class="form-control my-3" type="text" placeholder="Heading goes here">
+                <textarea formControlName="text" class="form-control mb-4" aria-label="With textarea"
+                    placeholder="Content goes here"></textarea>
+            <div class="postconfirm">
+                <label class="btn btn-outline-secondary" for="postimg"><i class="fa-solid fa-paperclip"></i> Select Image</label>
+                <input type="file" (change)="onFileSelected($event)" class="postimg" id="postimg">
+                <button class="btn btn-dark" type="submit">Post</button>
+            </div>
+        </form>
+        </div>
+    </div>
+
+    <ul class="nav nav-tabs w-100 mt-3 mx-auto">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Journals</a>
+        </li>
+    </ul>
+
+    <div class="container feedposts mb-5 pb-4">
+
+      <div *ngIf="feedPosts.length == 0">
+        <h4 class=" text-center my-5 py-5">Follow users to see posts</h4>
+      </div>
+  
+        <ul class="cards" data-aos="zoom-in-right" *ngFor="let i of feedPosts">
+          
+          <div >
+            <li class="w-50 mx-auto">
+              <a class="card">
+                <img src={{i.image}} class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src={{i.dp}} alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">{{i.name}}</h3>            
+                      <span class="card__status">{{i.date}}</span>
+                    </div>
+                  </div>
+                  <p class="card__description">{{i.text}}</p>
+                </div>
+              </a>      
+            </li>
+          </div>
+        </ul>
+    
+    </div>
+
+</div>

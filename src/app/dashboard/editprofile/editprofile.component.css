@@ -1,0 +1,72 @@
+.profile {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    height: 86%;
+    width: 90%;
+}
+
+.dp {
+    border-radius: 50% !important;
+    max-width: 385px;
+    height: 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    transition: .5s;
+}
+
+
+.dp label{
+    color: rgb(255, 255, 255);
+    display: none;
+    transition: .5s;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+
+/* .dp:hover{
+    backdrop-filter: brightness(20%)
+} */
+
+
+.dp:hover label{
+    display: block;
+    color: white;
+    backdrop-filter: brightness(50%);
+    transition: .5s;
+
+}
+
+
+.head {
+    margin-top: 80px;
+    margin-left: 60px;
+}
+
+input{
+    outline: none;
+    /* background-color: transparent;*/
+
+}
+
+.form-control:active{
+    box-shadow: none !important;
+
+}
+
+.name{
+    font-size: 45px;
+}
+
+.imgurl{
+    display: none;
+}
+
+
+.dltupdate{
+    display: flex;
+
+}

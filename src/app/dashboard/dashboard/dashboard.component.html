@@ -1,0 +1,85 @@
+<div class="dash">
+
+    <div class="sidebar">
+        <div class="profile">
+            <h2 class="pb-2">Hello {{using}} !</h2>
+            <!-- <pre class="mt-4">You are currently in : Kakkanad</pre>
+            <pre>Weather is sunny</pre> -->
+        </div>
+
+        <div class="text-center">
+            <section>
+                <div class="container">
+              
+                  <div class="row d-flex justify-content-center align-items-center h-100 p-2">
+
+                    <div class="mt-5">
+              
+                      <div class="card d-flex" style="color: #4B515D; border-radius: 35px;">
+                        <div class="card-body pt-4 text-center">
+              
+                          <div class="d-flex" style="justify-content: space-evenly;">
+                            <h6 class="">{{ locationName }}</h6>
+
+                            <h6 class="mb-0 font-weight-bold" style="color: #1C2331;">{{ weatherData }}</h6>
+
+                            <h6>{{ currentTime }}</h6>
+                          </div>
+              
+                        </div>
+                      </div>
+              
+                    </div>
+                  </div>
+              
+                </div>
+              </section>
+
+              <section class="">
+                <div class="moreoptions">
+                  <a href="dashboard/discover" class="btn btn-light"><i class="fa-solid fa-users"></i> Circle Connect</a><br>
+                </div>
+              </section>
+
+              <div class="footer">
+                <button (click)="settings()" class="btn btn-outline-dark"><i class="fa-solid fa-gear"></i> Edit Profile</button>
+                <button (click)="logout()" class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</button>
+              </div>
+        </div>
+    </div>
+
+
+    <div class="search">
+        <div class="search__container">
+            <input class="search__input" type="text" placeholder="Discover">
+        </div>
+
+    </div>
+
+
+
+    <div class="outlet">
+        <router-outlet></router-outlet>
+    </div>
+
+
+    <div class="bottom">
+        <nav>
+            <a href="/dashboard/feed">
+                <i class="fas fa-home me-2"></i>
+                <b>home</b>
+            </a>
+            <a href="/dashboard/profile">
+                <i class="fa-regular fa-user me-2"></i>
+                <b>Profile</b>
+            </a>
+            <a href="/dashboard/messaging">
+                <i class="fa-regular fa-paper-plane me-2"></i>
+                <b>Messages</b>
+            </a>
+            <span></span>
+        </nav>
+    </div>
+
+
+</div>

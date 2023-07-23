@@ -1,0 +1,52 @@
+<div class="profilebody">
+  <div class="card mb-3 w-75 h-50 mx-auto mt-5 p-5 bg-light profile">
+    <div class="row g-5">
+      <div class="col-md-4">
+        <img src={{dp}} class="img-fluid rounded dp" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title">{{userDetails.name}}</h1>
+          <div class="mt-4">
+            <p>Username - {{userDetails.username}}</p>
+            <p>Email - {{userDetails.email}}</p>
+            <p>Age - {{userDetails.age}}</p>
+            <p>From - {{userDetails.demographicInfo}}</p>
+            <p>Gender - {{userDetails.gender}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="head">Your Posts</h2>
+
+  <h3 class="text-center m-5">{{nullPosts}}</h3>
+
+  <div class="container userposts">
+
+    <ul class="cards" *ngFor="let i of posts">
+
+      <li class="w-50 mx-auto">
+        <a class="card">
+          <img src={{i.image}} class="card__image" alt="" />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img class="card__thumb" src={{dp}} alt="" />
+              <div class="card__header-text">
+                <h3 class="card__title">{{userDetails.name}}</h3>
+                <span class="card__status">{{i.date}}</span>
+              </div>
+              <button (click)="pushValue(i.iddate)" (click)="deletePost()" (click)="refreshPage()" class="ms-auto btn text-danger"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <p class="card__description">{{i.text}}</p>
+          </div>
+        </a>
+      </li>
+
+    </ul>
+
+  </div>

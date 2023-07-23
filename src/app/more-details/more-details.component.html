@@ -1,0 +1,51 @@
+
+
+
+
+<div class="moreDetails">
+  <aside class="profile-card">
+    <header>
+      <h1 class="my-5">Tell us more about you</h1>
+    </header>
+    
+    <form [formGroup]="moredetails" (ngSubmit)="details()" class="forms_form form-control p-5">
+      <div class="forms_field">
+        <input formControlName="email" type="email" placeholder="Email address" class="forms_field-input" required />
+      </div>
+      <div class="forms_field">
+        <input formControlName="age" type="text" placeholder="Age" class="forms_field-input" required />
+      </div>
+      <!-- <div class="forms_field">
+        <input formControlName="gender" type="text" placeholder="Gender" class="forms_field-input" required />
+      </div> -->
+      <div class="forms_field forms_field-input">
+        <p class="forms_field-input border-bottom-0 mb-3 pb-0">Gender</p>
+        <div class="d-flex gap-4 mb-1 ms-5 ps-4">
+          <label>
+            <input formControlName="gender" type="radio" value="male" />
+            Male
+          </label>
+          <label>
+            <input formControlName="gender" type="radio" value="female" />
+            Female
+          </label>
+          <label>
+            <input formControlName="gender" type="radio" value="other" />
+            Other
+          </label>
+        </div>
+      </div>
+      <div class="forms_field">
+        <input formControlName="loc" type="text" placeholder="Location" class="forms_field-input" required />
+      </div>
+      <div class="forms_field dpdiv">
+        <input (change)="onFileSelected($event)" type="file" class="forms_field-input dp form-control" id="dp" required />
+        <label class="btn btn-outline-secondary mx-auto" for="dp">Add a Profile Picture</label>
+      </div>
+      <div class="forms_buttons">
+        <button type="submit" class="forms_buttons-action">Hop in</button>
+      </div>
+    </form>
+
+  </aside>
+</div>

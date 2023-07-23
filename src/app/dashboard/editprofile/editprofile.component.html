@@ -1,0 +1,41 @@
+<div class="card mb-3 mx-auto mt-3 p-5 bg-light profile">
+    <div class="row g-5">
+        <div class="col-md-4 my-auto dp" style="background-image: url({{dp}});">
+            <!-- <img src={{dp}} class="dp" alt="..."> -->
+            <input (change)="onFileSelected($event)" class="imgurl" type="file" id="newimg" [(ngModel)]="dp" >
+            <label for="newimg" class="text-white">Change Display Picture</label>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <input type="text" class="name form-control" [(ngModel)]="userDetails.name">
+                <div class="mt-4">
+                    <div class="form-floating mb-3">
+                        <input type="text" [(ngModel)]="userDetails.username" class="form-control" id="floatingInputDisabled" placeholder="Unique username" disabled>
+                        <label for="floatingInputDisabled">Username</label>
+                    </div>
+                    <!-- <input type="text" [(ngModel)]="userDetails.username"><br> -->
+                    <div class="form-floating mb-3">
+                        <input type="email" [(ngModel)]="userDetails.email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email</label>
+                      </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" [(ngModel)]="userDetails.age" class="form-control" id="floatingInputDisabled" placeholder="Unique username" disabled>
+                        <label for="floatingInputDisabled">Age</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" [(ngModel)]="userDetails.demographicInfo" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Location</label>
+                      </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" [(ngModel)]="userDetails.gender" class="form-control" id="floatingInputDisabled" placeholder="Unique username" disabled>
+                        <label for="floatingInputDisabled">AGender</label>
+                    </div>
+                </div>
+            </div>
+            <div class="dltupdate">
+                <button class="btn btn-outline-dark ms-auto mb-5 me-3 mt-4 px-5" (click)="update()">Update</button>
+                <button class="btn btn-outline-danger me-3 mb-5 mt-4 px-5" (click)="deleteAccount()">Delete Account</button>
+            </div>
+        </div>
+    </div>
+</div>

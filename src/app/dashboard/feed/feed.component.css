@@ -1,0 +1,132 @@
+.feedbody{
+    width: 100% !important;
+}
+
+.newPost{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 10px;
+}
+
+.postconfirm{
+    display: flex;
+    justify-content: space-between;
+}
+
+form input{
+    box-shadow: none;
+}
+
+form textarea{
+    box-shadow: none;
+}
+
+.postimg{
+    display: none;
+}
+
+
+
+.feedposts .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .feedposts .card {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .feedposts .card__image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .feedposts .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: calc(var(--curve) * 1px);
+    background-color: var(--surface-color);
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .feedposts .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+  .feedposts .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) calc(var(--curve) * 1px) 0 0;
+    background-color: rgb(255, 255, 255);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .feedposts .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+    display: none;
+  }
+  
+  .feedposts .card__arc path {
+    fill: var(--surface-color);
+  }
+  
+  .feedposts .card:hover .card__header {
+    transform: translateY(0);
+  }
+  
+  .feedposts .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .feedposts .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+  }
+  
+  .feedposts .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-size: .8em;
+    color: #D7BDCA;
+  }
+  
+  .feedposts .card__status {
+    font-size: .8em;
+    color: #D7BDCA;
+  }
+  
+  .feedposts .card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #5e5e5e;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+  

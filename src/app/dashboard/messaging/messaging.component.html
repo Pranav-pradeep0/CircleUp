@@ -1,0 +1,70 @@
+<div class="body mx-auto">
+    <h2 class="text-center my-5">Messages</h2>
+
+    <div class="message">
+        <div class="chats">
+            <img class="card__thumb" src={{dp}} alt="" />
+            <h4 class="text-center py-4 chatHeading">Chats</h4>
+            
+            <div (click)="pushValue(i.username)" (click)="accessRecieversMessage()" (click)="accessSendersMessage()" class="followers me-4 pb-3 btn btn-light" *ngFor="let i of profiles">
+                <img class="chatimg" src={{i.displayPic}} alt="" />
+                <h6 class="my-auto pe-5">{{i.name}}</h6>
+            </div>
+        </div>
+
+        <div class="screen">
+            <!-- <div class="">
+                <h4 class="screenHeading m-0 py-4 text-center">
+                    {{clickedValue ? clickedValue : 'Tap on any person to start a chat'}}
+                </h4>
+            </div> -->
+
+            <div class="">
+                <ng-container *ngIf="clickedValue; else getStarted">
+                    <h4 class="screenHeading m-0 py-4 text-center">{{ clickedValue }}</h4>
+                </ng-container>
+                <ng-template #getStarted>
+                    <p class="screenHeading m-0 py-4 text-center">Tap on any person to start a chat</p>
+                </ng-template>
+            </div>
+
+            <!-- <div class="msgbody pt-3" >
+                <div class="rec d-block" *ngFor="let i of recievedMessages.reverse()">
+                    <div  class="bg-white w-50 me-auto rounded text-start mb-2 {{i.message ? 'py-3' : ''}} ps-5">{{i.message}}</div>
+                </div>
+
+                <div class="send d-block" *ngFor="let j of sendMessages.reverse()">
+                    <div class="bg-white w-50 ms-auto rounded text-end mb-2 {{j.message ? 'py-3' : ''}} pe-5">{{j.message}}</div>
+                </div>
+
+                <div class="w-100" *ngFor="let i of mergedmessage">
+                    <div class="bg-white rounded w-75 mb-2 {{i.message ? 'py-3 ps-4' : ''}}" [ngClass]="i.sender ? 'ms-auto pe-4' : 'me-auto'">{{i.message}}</div>
+                </div>
+
+            </div> -->
+
+
+            <div class="pt-3 mt-auto"  style="max-height: 373px; overflow-y: auto;">
+                <!-- <div class="rec d-block" *ngFor="let i of recievedMessages.reverse()">
+                    <div  class="bg-white w-50 me-auto rounded text-start mb-2 {{i.message ? 'py-3' : ''}} ps-5">{{i.message}}</div>
+                </div>
+
+                <div class="send d-block" *ngFor="let j of sendMessages.reverse()">
+                    <div class="bg-white w-50 ms-auto rounded text-end mb-2 {{j.message ? 'py-3' : ''}} pe-5">{{j.message}}</div>
+                </div> -->
+
+                <div class="msgbody w-100" *ngFor="let i of mergedmessage">
+                    <div class="bg-white rounded w-75 mb-2 {{i.message ? 'py-3 ps-4' : ''}}" [ngClass]="i.sender ? 'ms-auto pe-4' : 'me-auto'">{{i.message}}</div>
+                </div>
+
+            </div>
+
+
+            <form [formGroup]="messageInput" (ngSubmit)="sendMessage()" class="d-flex bottom">
+                <input [(ngModel)]="inputValue" formControlName="message" type="text" class="form-control type" placeholder="Type something">
+                <button type="submit" (click)="recieveMessage()" (click)="accessRecieversMessage()" (click)="accessSendersMessage()" class="btn btn-light"><i class="fa-regular fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+</div>

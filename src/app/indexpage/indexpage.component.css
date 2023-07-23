@@ -1,0 +1,125 @@
+/* .indexpage{
+    background-color: #031927dc;
+} */
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+.texttype {
+    color: rgba(0, 0, 0, 0.842);
+}
+
+.icon {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.842);
+    translate: -100px;
+    animation: slideFade 3s forwards;
+}
+
+
+@keyframes slideFade {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(230px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(250px);
+        opacity: 0;
+    }
+}
+
+
+
+.loader {
+    --ballcolor: #585858;
+    --shadow: 0px 0 #ffffff00;
+    --shadowcolor: #ffffff00;
+    width: 10px;
+    height: 10px;
+    margin-left: -200px;
+    margin-top: 110px;
+    border-radius: 50%;
+    position: relative;
+    color: var(--ballcolor);
+    animation: shadowRolling 3s linear infinite;
+    position: absolute;
+  }
+  
+  @keyframes shadowRolling {
+    
+    0% {
+      box-shadow: var(--shadow),
+          var(--shadow),
+          var(--shadow),
+          var(--shadow);
+    }
+  
+    12% {
+      box-shadow: 100px 0 var(--ballcolor),
+          var(--shadow),
+          var(--shadow), 
+          var(--shadow);
+    }
+  
+    25% {
+      box-shadow: 110px 0 var(--ballcolor),
+          100px 0 var(--ballcolor),
+          var(--shadow), 
+          var(--shadow);
+    }
+  
+    36% {
+      box-shadow: 120px 0 var(--ballcolor), 
+          110px 0 var(--ballcolor), 
+          100px 0 var(--ballcolor), 
+           var(--shadow);
+    }
+  
+    50% {
+      box-shadow: 130px 0 var(--ballcolor),
+          120px 0 var(--ballcolor),
+          110px 0 var(--ballcolor),
+          100px 0 var(--ballcolor);
+    }
+  
+    62% {
+      box-shadow: 200px 0 var(--shadowcolor),
+           130px 0 var(--ballcolor), 
+           120px 0 var(--ballcolor), 
+           110px 0 var(--ballcolor);
+    }
+  
+    75% {
+      box-shadow: 200px 0 var(--shadowcolor),
+          200px 0 var(--shadowcolor),
+          130px 0 var(--ballcolor), 
+          120px 0 var(--ballcolor);
+    }
+  
+    87% {
+      box-shadow: 200px 0 var(--shadowcolor), 
+          200px 0 var(--shadowcolor), 
+          200px 0 var(--shadowcolor), 
+          130px 0 var(--ballcolor);
+    }
+  
+    100% {
+      box-shadow: 200px 0 var(--shadowcolor), 
+          200px 0 var(--shadowcolor),
+          200px 0 var(--shadowcolor),
+          200px 0 var(--shadowcolor);
+    }
+  }
